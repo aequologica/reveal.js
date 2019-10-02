@@ -59,7 +59,8 @@
 					<table>
 						<thead>
 							<tr class="fragment">
-								<th colspan="2">semantics</th>
+								<th colspan="2">semantics <a href="https://semver.org/" target="_semver"><i
+											class="fa fa-external-link" aria-hidden="true"></i></a></th>
 								<th>incremented when &hellip;</th>
 							</tr>
 						</thead>
@@ -86,8 +87,8 @@
 			<section>
 				<h4>Where is the version information ?</h4>
 				<p class="fragment">external to the artifact</p>
-				<p class="fragment">&hellip; embedded within the artifact</p>
-				<p class="fragment">&hellip; in the source code as well</p>
+				<p class="fragment"><i class="fa fa-plus" aria-hidden="true"></i> embedded within the artifact</p>
+				<p class="fragment"><i class="fa fa-plus" aria-hidden="true"></i> in the source code as well</p>
 			</section>
 			<section data-background="images/branches.jpg">
 			</section>
@@ -101,30 +102,33 @@
 				</p>
 				<p class="fragment">Creating a branch is cheap, merging it back to trunk is expensive</p>
 			</section>
-			<!--/section-->
-			<section data-background="images/demo.jpg">
-			</section>
 			<section>
-				<iframe data-src="https://cthiebaud.github.io/iroif/workflows.html" width="1800px" height="700px"
-					frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;"
-					allowfullscreen>
-				</iframe>
+				<section data-background="images/demo.jpg">
+				</section>
+				<section>
+					<iframe data-src="https://cthiebaud.github.io/iroif/workflows.html" width="1800px" height="700px"
+						frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;"
+						allowfullscreen>
+					</iframe>
+				</section>
 			</section>
 			<section>
 				<section>
 					<h3>Gitflow</h3>
 					<span class="fragment">
-					  <p>"The Gitflow Workflow defines a strict branching model designed around the project release"
-					    <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow" target="_atlassian">
-						  <i class="fa fa-external-link" aria-hidden="true"></i>
-						</a>
-					  </p>
-					  <p>
-						<a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_nvie" >Original post</a> 
-						by 
-						<a href="https://twitter.com/nvie" target="_driesen">Vincent Driessen</a>
-					  </p>
-				    </span>
+						<p>"The Gitflow Workflow defines a strict branching model designed around the project release"
+							<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"
+								target="_atlassian">
+								<i class="fa fa-external-link" aria-hidden="true"></i>
+							</a>
+						</p>
+						<p>
+							<a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_nvie">Original
+								post</a>
+							by
+							<a href="https://twitter.com/nvie" target="_driesen">Vincent Driessen</a>
+						</p>
+					</span>
 				</section>
 				<section>
 					<iframe data-src="https://nvie.com/files/Git-branching-model.pdf" width="1800px" height="700px"
@@ -142,31 +146,74 @@
 			<section data-background="images/rabbit_in_the_cloud.jpg">
 			</section>
 			<section>
-				<h2>On-Premise vs. Cloud</h2>
-				<p>Do we need all these branches for an application operated in the cloud?</p>
-				<h4 class="fragment"><i class="fa fa-arrow-right" aria-hidden="true"></i> Feature toggle</h4>
-				<p class="fragment">
-					"a technique in software development that attempts to provide an alternative to maintaining multiple
-					source-code branches"
-					<a href="https://en.wikipedia.org/wiki/Feature_toggle" target="_toggle"><i
-							class="fa fa-external-link" aria-hidden="true"></i></a>
-				</p>
+				<section>
+					<h2>On-Premise vs. Cloud</h2>
+					<p>Do we need all these branches for an application operated in the cloud?</p>
+					<p class="fragment">One URL <i class="fa fa-arrow-right" aria-hidden="true"></i> One App of One
+						Version
+						<i class="fa fa-arrow-right" aria-hidden="true"></i> One Branch!
+					</p>
+					<span class="fragment">
+						<h4><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Feature toggle</h4>
+						<p>
+							"a technique in software development that attempts to provide an alternative to maintaining
+							multiple
+							source-code branches"
+							<a href="https://en.wikipedia.org/wiki/Feature_toggle" target="_toggle"><i
+									class="fa fa-external-link" aria-hidden="true"></i></a>
+						</p>
+					</span>
+				</section>
+				<section>
+					<center>
+						<img src="images/toggle.png" style="width:auto; height:600px;" />
+					</center>
+				</section>
 			</section>
 			<section>
-				<center>
-					<img src="images/toggle.png" style="width:auto; height:600px;" />
-				</center>
+				<section>
+					<p>Apply the 'One Branch' mantra to the Release Process</p>
+				</section>
+				<section>
+					<center>
+						<img src="images/one_branch.png" style="width:auto; height:600px;" />
+					</center>
+				</section>
 			</section>
 			<section>
-				<center>
-					<img src="images/one_branch.png" style="width:auto; height:600px;" />
-				</center>
+				<section>
+					<p>Are Feature Branches that bad?</p>
+				</section>
+				<section>
+					<center>
+						<img src="images/feature_branches.png" style="width:auto; height:600px;" />
+					</center>
+				</section>
+				<section>
+					<center>
+						<img src="images/feature_branches_w_rebase.png" style="width:auto; height:600px;" />
+					</center>
+				</section>
 			</section>
 			<section>
-				<center>
-					<img src="images/feature_branches.png" style="width:auto; height:600px;" />
-				</center>
+				<section>
+					<p>Decoupling</p>
+				</section>
+				<section>
+					<p> from Monolith (tightly coupled) to Microservices (decoupled)
+					</p>
+					<center>
+						<img src="images/decoupling.png" style="width:auto; height:500px;" />
+					</center>
+				</section>
+				<section>
+					<p>Two microservices and their shared database.</p>
+					<center>
+						<img src="images/microservices.png" style="width:auto; height:500px;" />
+					</center>
+				</section>
 			</section>
+
 			<section>
 				<h2>Questions?</h2>
 			</section>
