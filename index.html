@@ -1,49 +1,166 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<style>
+		.red {
+			color: red;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="images/bg.png">
+				<h1>Releases, Versions, Branches.</h1>
+				<p>
+					<small>A Modest Proposal For preventing the Software of Average Developers From being a Burden to
+						Their Manager or Organization, and For making it Beneficial to the Public.</small>
+				</p>
+			</section>
+			<!--section-->
+			<section>
+				<h2>Releases</h2>
+				<p class="fragment">The association of a validation level with a software artifact</p>
+				<p class="fragment">A released artifact is immutable</p>
+				<p class="fragment">and is identified through a version number</p>
+			</section>
+			<section data-background="images/versions.png">
+			</section>
+			<section>
+				<h2>Versions</h2>
+				<p>
+					<table>
+						<thead>
+							<tr class="fragment">
+								<th colspan="2">semantics</th>
+								<th>incremented when &hellip;</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="fragment">
+								<td>x.y.<span class="red">z</span></td>
+								<td>patch</td>
+								<td>backwards compatible bug fixes are introduced</td>
+							</tr>
+							<tr class="fragment">
+								<td>x.<span class="red">y</span>.z</td>
+								<td>minor</td>
+								<td>new, backwards compatible functionality is introduced</td>
+							</tr>
+							<tr class="fragment">
+								<td><span class="red">x</span>.y.z</td>
+								<td>major</td>
+								<td>backwards <i>incompatible</i> changes are introduced</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+			</section>
+			<section>
+				<h4>Where is the version information ?</h4>
+				<p class="fragment">external to the artifact</p>
+				<p class="fragment">&hellip; embedded within the artifact</p>
+				<p class="fragment">&hellip; in the source code as well</p>
+			</section>
+			<section data-background="images/branches.jpg">
+			</section>
+			<section>
+				<h2>Branches</h2>
+				<p class="fragment">Branching is the practice of creating copies of programs or objects in
+					development to work in parallel versions</p>
+				<p class="fragment">Creating a branch is cheap, merging back to trunk is costly.</p>
+			</section>
+			<!--/section-->
+			<section data-background="images/demo.jpg">
+			</section>
+			<section>
+				<iframe data-src="https://cthiebaud.github.io/iroif/workflows.html" width="1800px" height="700px"
+					frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;"
+					allowfullscreen>
+				</iframe>
+			</section>
+			<section>
+				<h1>Gitflow</h1>
+			</section>
+			<section>
+				<center>
+					<img src="images/git-flow.png" style="width:auto; height:600px;" />
+				</center>
+			</section>
+			<section data-background="images/rabbit_in_the_cloud.jpg">
+			</section>
+			<section>
+				<h2>On-Premise vs. Cloud</h2>
+				<p>do we need all these branches for an application operated in the cloud?</p>
+				<h4 class="fragment">-> Feature toggle</h4>
+				<p class="fragment">"a technique in software development that attempts to provide an alternative to
+					maintaining multiple source-code branches"</p>
+			</section>
+			<section>
+				<center>
+					<img src="images/toggle.png" style="width:auto; height:600px;" />
+				</center>
+			</section>
+			<section>
+				<center>
+					<img src="images/one_branch.png" style="width:auto; height:600px;" />
+				</center>
+			</section>
+			<section>
+				<center>
+					<img src="images/feature_branches.png" style="width:auto; height:600px;" />
+				</center>
+			</section>
+			<section>
+				<h2>Questions?</h2>
+			</section>
+			<section>
+				<center>
+					<img src="images/joke.png" style="width:auto; height:600px;" />
+				</center>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
 </html>
